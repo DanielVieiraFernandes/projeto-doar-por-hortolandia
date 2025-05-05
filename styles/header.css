@@ -51,4 +51,20 @@ header .container {
   }
 }
 
+.page-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
 
+  & h1 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  & p {
+    font-size: var(--font-size-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

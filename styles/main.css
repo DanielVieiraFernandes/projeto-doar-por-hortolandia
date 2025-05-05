@@ -39,7 +39,6 @@ section {
       align-items: center;
     }
   }
-
 }
 
 #info {
@@ -72,7 +71,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
   height: 100%;
 }
 
@@ -105,4 +105,83 @@ section {
 #info p {
   font-size: var(--font-size-base);
   color: var(--color-gray-700);
+}
+
+.locais-doacao .info-box,
+.diretrizes-intro .info-box {
+  background-color: var(--color-primary-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+map-overview h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.map-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.static-map,
+.location-map {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.map-placeholder {
+  background-color: var(--color-gray-300);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-gray-700);
+  border-radius: var(--border-radius-md);
+}
+
+.location-map .map-placeholder {
+  min-height: 150px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.location-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.location-card h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.location-card .address {
+  font-weight: 500;
+}
+
+.location-card .phone,
+.location-card .hours {
+  color: var(--color-gray-700);
+}
+
+.location-card .location-map {
+  margin-top: var(--spacing-lg);
 }
