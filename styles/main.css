@@ -10,34 +10,99 @@ section:nth-child(odd) {
   background-color: var(--color-white);
 }
 
-#heading {
+section {
   color: var(--color-black);
   padding: var(--spacing-4xl) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 
-  & .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  &#heading {
+    & h1 {
+      font-size: var(--font-size-5xl);
+      margin-bottom: var(--spacing-md);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    & p {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-xl);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    & .cta-buttons {
+      display: flex;
+      margin-top: var(--spacing-3xl);
+      gap: var(--spacing-md);
+      align-items: center;
+    }
   }
 
-  & h1 {
-    font-size: var(--font-size-5xl);
-    margin-bottom: var(--spacing-md);
-    max-width: 800px;
-  }
+}
 
-  & p {
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-xl);
-    max-width: 800px;
-  }
+#info {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-gray-100);
+}
 
-  & .cta-buttons {
-    display: flex;
-    gap: var(--spacing-md);
-    align-items: center;
-  }
+#info h2 {
+  text-align: center;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-800);
+  font-weight: 600;
+  margin-bottom: var(--spacing-3xl);
+}
+
+#info .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+#info .card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+}
+
+#info .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+#info .card-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius-rounded);
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+}
+
+#info h3 {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-sm);
+}
+
+#info p {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
 }

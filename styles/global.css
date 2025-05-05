@@ -72,6 +72,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--color-white);
 }
 
 ul {
@@ -117,4 +118,16 @@ ul {
     background-color: var(--color-secondary-dark);
     color: var(--shadow-md);
   }
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template-columns {
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+
+.gap {
+  gap: 2rem;
 }
