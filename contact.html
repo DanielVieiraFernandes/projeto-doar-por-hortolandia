@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doação de Roupas Hortolândia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/icons/logo.svg"
+              alt="Logo do projeto Doar por Hortolândia"
+            />
+            <span>Doar por Hortolândia</span>
+          </a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li>
+              <a href="locations.html">Locais de Doação</a>
+            </li>
+            <li><a href="about.html">Sobre Nós</a></li>
+            <li><a href="guidelines.html">Diretrizes</a></li>
+            <li><a href="contact.html" class="active">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="page-header">
+        <div class="container">
+          <h1>Entre em Contato</h1>
+          <p>
+            Envie-nos suas dúvidas, sugestões ou solicite informações sobre como
+            participar do projeto
+          </p>
+        </div>
+      </section>
+
+      <section class="contato-info">
+        <div class="container">
+          <div class="two-columns">
+            <div class="column">
+              <h2>Informações de Contato</h2>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <h3>Telefone</h3>
+                  <p>(19) 99999-9999</p>
+                  <p>Segunda a sexta, das 9h às 17h</p>
+                </div>
+                <div class="contact-item">
+                  <h3>E-mail</h3>
+                  <p>contato@doarmodahortolandia.org.br</p>
+                </div>
+                <div class="contact-item">
+                  <h3>Endereço da Sede</h3>
+                  <p>Rua Exemplo, 123 - Centro</p>
+                  <p>Hortolândia - SP, 13184-000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <h2>Formulário de Contato</h2>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="nome">Nome Completo*</label>
+                  <input type="text" id="nome" name="nome" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail*</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" id="telefone" name="telefone" />
+                </div>
+                <div class="form-group">
+                  <label for="assunto">Assunto*</label>
+                  <select id="assunto" name="assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="duvida">Dúvidas sobre doação</option>
+                    <option value="voluntario">Quero ser voluntário</option>
+                    <option value="coleta">Solicitar coleta domiciliar</option>
+                    <option value="parceria">Proposta de parceria</option>
+                    <option value="outro">Outro assunto</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mensagem">Mensagem*</label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group checkbox">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <label for="newsletter"
+                    >Desejo receber notícias e atualizações por e-mail</label
+                  >
+                </div>
+                <div class="container-btn">
+                    <button type="submit" class="btn primary">
+                  Enviar Mensagem
+                </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2>Perguntas Frequentes</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <h3>Como posso fazer uma doação?</h3>
+              <p>
+                Você pode levar suas doações a qualquer um dos nossos pontos de
+                coleta espalhados pela cidade. Consulte a página de "Locais de
+                Doação" para encontrar o ponto mais próximo de você.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Quais tipos de roupas posso doar?</h3>
+              <p>
+                Aceitamos roupas, calçados, acessórios, roupas de cama e banho,
+                desde que estejam em bom estado de conservação. Para mais
+                detalhes, consulte nossa página de "Diretrizes".
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Como posso me tornar voluntário?</h3>
+              <p>
+                Preencha o formulário de contato selecionando a opção "Quero ser
+                voluntário" no campo Assunto. Nossa equipe entrará em contato
+                para explicar as possibilidades de atuação.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Vocês fazem coleta em domicílio?</h3>
+              <p>
+                Em casos especiais, como grandes volumes de doação ou
+                dificuldade de transporte, podemos organizar uma coleta em
+                domicílio. Entre em contato conosco para verificar a
+                disponibilidade.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Como são distribuídas as doações?</h3>
+              <p>
+                As doações são separadas, organizadas e distribuídas diretamente
+                às famílias cadastradas em nosso programa ou através de outras
+                instituições parceiras em Hortolândia.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Minha empresa pode ser parceira do projeto?</h3>
+              <p>
+                Sim! Temos diversas formas de parceria. Entre em contato
+                selecionando a opção "Proposta de parceria" no formulário de
+                contato ou ligue para o nosso telefone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/icons/logo.svg" alt="Logo Por Hortolândia" />
+            <p>Doar Por Hortolândia</p>
+          </div>
+          <div class="footer-links">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="locations.html">Locais de Doação</a></li>
+              <li><a href="about.html">Sobre Nós</a></li>
+              <li><a href="guidelines.html">Diretrizes</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contato</h4>
+            <p>Email: contato@doarporhortolandia.org.br</p>
+            <p>Telefone: (19) 99999-9999</p>
+            <p>Hortolândia, São Paulo - Brasil</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Doar Por Hortolândia. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -13,32 +13,8 @@ section:nth-child(odd) {
 section {
   color: var(--color-black);
   padding: var(--spacing-4xl) 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
-
-  &#heading {
-    & h1 {
-      font-size: var(--font-size-5xl);
-      margin-bottom: var(--spacing-md);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    & p {
-      font-size: var(--font-size-xl);
-      margin-bottom: var(--spacing-xl);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    & .cta-buttons {
-      display: flex;
-      margin-top: var(--spacing-3xl);
-      gap: var(--spacing-md);
-      align-items: center;
-    }
-  }
 }
 
 #info {
@@ -113,6 +89,8 @@ section {
   padding: var(--spacing-xl);
   border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-xl);
+
+  text-align: left;
 }
 
 map-overview h2 {
@@ -132,7 +110,9 @@ map-overview h2 {
 }
 
 .map-placeholder {
-  background-color: var(--color-gray-300);
+  background: url("../assets/images/mapa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -184,4 +164,150 @@ map-overview h2 {
 
 .location-card .location-map {
   margin-top: var(--spacing-lg);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn.primary {
+  margin-top: 3rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.contato-info .two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2xl);
+}
+
+.contato-info .column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-details {
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-item {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-item h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.contact-item p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.sede-map {
+  margin-top: var(--spacing-xl);
+}
+
+.sede-map .map-placeholder {
+  min-height: 250px;
+}
+
+.contact-form {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+
+  & .container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-gray-100);
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+.form-group.checkbox label {
+  margin-bottom: 0;
+}
+
+.faq {
+  background-color: var(--color-gray-100);
+}
+
+.faq h2 {
+  text-align: center;
+}
+
+.faq-items {
+  margin-top: var(--spacing-xl);
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.faq-item h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-item p {
+  margin-bottom: 0;
 }

@@ -43,6 +43,10 @@ header .container {
       font-weight: 500;
       color: var(--color-gray-700);
     }
+    & .active {
+      color: var(--color-primary-dark);
+      background-color: var(--color-gray-100);
+    }
 
     & a:hover {
       color: var(--color-primary-dark);
@@ -51,11 +55,11 @@ header .container {
   }
 }
 
-.page-header {
-  background-color: var(--color-primary);
+#page-header {
+  background: var(--linear-gradient);
   color: var(--color-white);
-  padding: var(--spacing-3xl) 0;
   text-align: center;
+  
 
   & h1 {
     margin-bottom: var(--spacing-sm);
@@ -63,8 +67,13 @@ header .container {
 
   & p {
     font-size: var(--font-size-xl);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  & .cta-buttons {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
   }
 }

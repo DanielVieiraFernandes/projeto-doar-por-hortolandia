@@ -7,6 +7,7 @@
 :root {
   --color-primary: #4ecdc4;
   --color-primary-light: #a2faf1;
+  --linear-gradient: linear-gradient(135deg, var(--color-primary-dark), var(--color-gray-800));
   --color-primary-dark: #3aa99e;
   --color-secondary: #ff8c42;
   --color-secondary-light: #ffc2a1;
@@ -70,8 +71,13 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {    
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -103,7 +109,6 @@ h4 {
   color: var(--color-gray-800);
 }
 
-
 a {
   text-decoration: none;
   color: var(--color-white);
@@ -118,6 +123,11 @@ ul {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
+
+  & .cta-center {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn {
@@ -159,9 +169,17 @@ ul {
 }
 
 .grid-template-columns {
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .gap {
   gap: 2rem;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
 }
