@@ -130,7 +130,7 @@ map-overview h2 {
 
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 5fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
 }
@@ -325,6 +325,7 @@ map-overview h2 {
       gap: var(--spacing-md);
       color: var(--color-gray-800);
       font-weight: 400;
+      text-align: justify;
     }
   }
 
