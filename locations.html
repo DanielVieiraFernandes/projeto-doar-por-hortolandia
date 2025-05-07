@@ -18,7 +18,11 @@
       rel="stylesheet"
     />
 
-    <link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo.svg"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
@@ -33,10 +37,13 @@
             <span>Doar por Hortolândia</span>
           </a>
         </div>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
         <nav>
           <ul class="menu">
             <li><a href="index.html">Início</a></li>
-            <li><a href="locations.html" class="active">Locais de Doação</a></li>
+            <li>
+              <a href="locations.html" class="active">Locais de Doação</a>
+            </li>
             <li><a href="about.html">Sobre Nós</a></li>
             <li><a href="guidelines.html">Diretrizes</a></li>
             <li><a href="contact.html">Contato</a></li>
@@ -45,140 +52,167 @@
       </div>
     </header>
     <main>
-        <section id="page-header">
-            <div class="container">
-                <h1>Locais de Doação</h1>
-                <p>Conheça os pontos de coleta em Hortolândia onde você pode deixar suas doações</p>
-            </div>
-        </section>
-        <section class="locais-doacao">
-          <div class="container">
-              <div class="info-box">
-                  <h2>Horários de Funcionamento</h2>
-                  <p>Nossos pontos de coleta funcionam de segunda a sexta das 9h às 17h, e aos sábados das 9h às 12h.</p><br>
-                  <p>Importante: Confirme o horário de funcionamento diretamente com o ponto de coleta antes de realizar sua visita.</p>
-              </div>
-  
-              <div class="map-overview">
-                  <h2>Mapa de Pontos de Coleta</h2>
-                  <div class="map-container">
-                      <div class="static-map">
-                          <div class="map-placeholder">
-                              <p>Mapa de Pontos de Coleta em Hortolândia</p>
-                              <small>Consulte a lista abaixo para endereços detalhados</small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="locations-grid">
-                  <div class="location-card">
-                      <h3>Centro Comunitário Jardim Amanda</h3>
-                      <p class="address">Rua das Flores, 123 - Jardim Amanda, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Segunda a sexta, 9h às 17h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Centro Comunitário Jardim Amanda</p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="location-card">
-                      <h3>Escola Municipal Parque Orestes</h3>
-                      <p class="address">Av. Principal, 456 - Parque Orestes, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Segunda a sexta, 8h às 16h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Escola Municipal Parque Orestes</p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="location-card">
-                      <h3>Associação de Moradores Jardim Rosolém</h3>
-                      <p class="address">Rua dos Ipês, 789 - Jardim Rosolém, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Segunda, quarta e sexta, 9h às 17h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Associação de Moradores Jardim Rosolém</p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="location-card">
-                      <h3>Igreja Nossa Senhora Aparecida</h3>
-                      <p class="address">Rua São José, 321 - Centro, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Terça a domingo, 8h às 18h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Igreja Nossa Senhora Aparecida</p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="location-card">
-                      <h3>Supermercado Bom Preço</h3>
-                      <p class="address">Av. Santana, 654 - Jardim São Pedro, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Todos os dias, 8h às 22h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Supermercado Bom Preço</p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="location-card">
-                      <h3>Centro Cultural de Hortolândia</h3>
-                      <p class="address">Praça Central, 100 - Centro, Hortolândia - SP</p>
-                      <p class="phone">Telefone: (19) 3865-XXXX</p>
-                      <p class="hours">Horário: Segunda a sábado, 9h às 20h</p>
-                      <div class="location-map">
-                          <div class="map-placeholder">
-                              <p>Centro Cultural de Hortolândia</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="cta-center">
-                  <a href="contact.html" class="btn primary">Dúvidas sobre os locais? Entre em contato</a>
-              </div>
-          </div>
+      <section id="page-header">
+        <div class="container">
+          <h1>Locais de Doação</h1>
+          <p>
+            Conheça os pontos de coleta em Hortolândia onde você pode deixar
+            suas doações
+          </p>
+        </div>
       </section>
-    </main> 
+      <section class="locais-doacao">
+        <div class="container">
+          <div class="info-box">
+            <h2>Horários de Funcionamento</h2>
+            <p>
+              Nossos pontos de coleta funcionam de segunda a sexta das 9h às
+              17h, e aos sábados das 9h às 12h.
+            </p>
+            <br />
+            <p>
+              Importante: Confirme o horário de funcionamento diretamente com o
+              ponto de coleta antes de realizar sua visita.
+            </p>
+          </div>
+
+          <div class="map-overview">
+            <h2>Mapa de Pontos de Coleta</h2>
+            <div class="map-container">
+              <div class="static-map">
+                <div class="map-placeholder">
+                  <p>Mapa de Pontos de Coleta em Hortolândia</p>
+                  <small
+                    >Consulte a lista abaixo para endereços detalhados</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="locations-grid">
+            <div class="location-card">
+              <h3>Centro Comunitário Jardim Amanda</h3>
+              <p class="address">
+                Rua das Flores, 123 - Jardim Amanda, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Segunda a sexta, 9h às 17h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Centro Comunitário Jardim Amanda</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <h3>Escola Municipal Parque Orestes</h3>
+              <p class="address">
+                Av. Principal, 456 - Parque Orestes, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Segunda a sexta, 8h às 16h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Escola Municipal Parque Orestes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <h3>Associação de Moradores Jardim Rosolém</h3>
+              <p class="address">
+                Rua dos Ipês, 789 - Jardim Rosolém, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Segunda, quarta e sexta, 9h às 17h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Associação de Moradores Jardim Rosolém</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <h3>Igreja Nossa Senhora Aparecida</h3>
+              <p class="address">
+                Rua São José, 321 - Centro, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Terça a domingo, 8h às 18h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Igreja Nossa Senhora Aparecida</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <h3>Supermercado Bom Preço</h3>
+              <p class="address">
+                Av. Santana, 654 - Jardim São Pedro, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Todos os dias, 8h às 22h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Supermercado Bom Preço</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <h3>Centro Cultural de Hortolândia</h3>
+              <p class="address">
+                Praça Central, 100 - Centro, Hortolândia - SP
+              </p>
+              <p class="phone">Telefone: (19) 3865-XXXX</p>
+              <p class="hours">Horário: Segunda a sábado, 9h às 20h</p>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <p>Centro Cultural de Hortolândia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-center">
+            <a href="contact.html" class="btn primary"
+              >Dúvidas sobre os locais? Entre em contato</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="container">
         <div class="footer-content">
-            <div class="footer-logo">
-                <img src="assets/icons/logo.svg" alt="Logo Por Hortolândia">
-                <p>Doar Por Hortolândia</p>
-            </div>
-            <div class="footer-links">
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="locations.html">Locais de Doação</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="guidelines.html">Diretrizes</a></li>
-                    <li><a href="contact.html">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p>Email: contato@doarporhortolandia.org.br</p>
-                <p>Telefone: (19) 99999-9999</p>
-                <p>Hortolândia, São Paulo - Brasil</p>
-            </div>
+          <div class="footer-logo">
+            <img src="assets/icons/logo.svg" alt="Logo Por Hortolândia" />
+            <p>Doar Por Hortolândia</p>
+          </div>
+          <div class="footer-links">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="locations.html">Locais de Doação</a></li>
+              <li><a href="about.html">Sobre Nós</a></li>
+              <li><a href="guidelines.html">Diretrizes</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contato</h4>
+            <p>Email: contato@doarporhortolandia.org.br</p>
+            <p>Telefone: (19) 99999-9999</p>
+            <p>Hortolândia, São Paulo - Brasil</p>
+          </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Doar Por Hortolândia. Todos os direitos reservados.</p>
+          <p>&copy; 2025 Doar Por Hortolândia. Todos os direitos reservados.</p>
         </div>
-    </div>
+      </div>
     </footer>
+    <script src="./scripts/menu-toggle.js"></script>
   </body>
 </html>

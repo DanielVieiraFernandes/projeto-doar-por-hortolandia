@@ -47,8 +47,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  transition: transform var(--transition-normal),
-    box-shadow var(--transition-normal);
+  transition: transform var(--transition-normal);
+  box-shadow: var(--transition-normal);
   height: 100%;
 }
 
@@ -437,4 +437,3 @@ map-overview h2 {
     border-bottom: 2px solid var(--color-primary-light);
   }
 }
-

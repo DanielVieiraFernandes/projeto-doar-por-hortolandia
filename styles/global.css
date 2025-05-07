@@ -129,6 +129,7 @@ ul {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
+  /* background-color: red; */
 
   & .cta-center {
     display: flex;
