@@ -1,41 +1,39 @@
 const form = document.querySelector("#contactForm");
-const contentField = document.querySelector("#assunto");
-const email = document.querySelector("#email");
+const button = document.querySelector("#sendButton");
+const btnText = document.querySelector("#btnText");
+const spinner = button.querySelector("#spin");
 
-const sendEmail = async (content) => {
-  try {
-    const response = await fetch("http://localhost:3333/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email.value,
-        content,
-      }),
-    });
-
-    if (!response.ok) {
-      return alert("Erro ao enviar mensagem!");
-    }
-
-    alert("Formulário enviado com sucesso! Verifique seu e-mail.");
-    form.reset();
-  } catch (error) {
-    console.log("Erro na requisição", error);
-    alert("Erro ao enviar a mensagem, verifique e tente novamente");
-  }
-};
+const elements = form.querySelectorAll("input, select, textarea, button");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  button.setAttribute("disabled", "true");
+  btnText.textContent = "Enviando...";
+  spinner.classList.add("spinner");
 
-  const content = contentField.value;
+  const formData = new FormData(form);
 
-  if (content.length === 0) {
-    alert("Por favor, digite uma mensagem");
-    return;
+  const email = Object.fromEntries(formData.entries()).email;
+
+  form.reset();
+  elements.forEach(el => el.disabled = true);
+  try {
+    await fetch(`https://formsubmit.co/ajax/${email}`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+      },
+      body: formData,
+    });
+
+    alert("Mensagem enviada com sucesso!");
+  } catch (error) {
+    console.error("Erro ao enviar o formulário:", error);
+    alert("Houve um erro ao enviar a mensagem. Tente novamente.");
+  } finally {
+    button.removeAttribute("disabled");
+    btnText.textContent = "Enviar Mensagem";
+    spinner.classList.remove("spinner");
+    elements.forEach(el => el.disabled = false);
   }
-
-  await sendEmail(content);
 });

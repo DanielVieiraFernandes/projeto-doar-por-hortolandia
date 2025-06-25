@@ -65,7 +65,7 @@
 
 body {
   background-color: var(--color-gray-100);
-  font-family: var(--font-family-body);
+  font: var(--font-size-lg)/var(--spacing-lg) var(--font-family-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -189,4 +189,49 @@ button, input, select, textarea {
   color: inherit;
   border: none;
   outline: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-rounded);
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  text-align: center;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.1);
 }

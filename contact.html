@@ -59,7 +59,6 @@
           </p>
         </div>
       </section>
-
       <section class="contato-info">
         <div class="container">
           <div class="two-columns">
@@ -73,7 +72,7 @@
                 </div>
                 <div class="contact-item">
                   <h3>E-mail</h3>
-                  <p>contato@doarmodahortolandia.org.br</p>
+                  <p>contato@doarporhortolandia.org.br</p>
                 </div>
                 <div class="contact-item">
                   <h3>Endereço da Sede</h3>
@@ -82,7 +81,6 @@
                 </div>
               </div>
             </div>
-
             <div class="column">
               <h2>Formulário de Contato</h2>
               <form class="contact-form" id="contactForm">
@@ -92,17 +90,28 @@
                     type="text"
                     id="nome"
                     name="nome"
+                    placeholder="Ex: Alexandre Grotta"
+                    pattern="^([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+)(\s[A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+)*$"
+                    title="O nome deve começar com letra maiúscula e conter apenas letras, espaços, apóstrofos e hífens."
                     minlength="3"
+                    maxlength="255"
                     required
                   />
                 </div>
                 <div class="form-group">
                   <label for="email">E-mail*</label>
-                  <input type="email" id="email" name="email" required />
+                  <input type="email" id="email" placeholder="email@example.com" name="email" required />
                 </div>
                 <div class="form-group">
                   <label for="telefone">Telefone</label>
-                  <input type="tel" id="telefone" name="telefone" />
+                  <input
+                    type="tel"
+                    id="telefone"
+                    required
+                    pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                    placeholder="(19) 99999-9999 ou 19999999999"
+                    name="telefone"
+                  />
                 </div>
                 <div class="form-group">
                   <label for="assunto">Assunto*</label>
@@ -120,7 +129,10 @@
                   <textarea
                     id="mensagem"
                     name="mensagem"
+                    minlength="15"
+                    maxlength="800"
                     rows="5"
+                    placeholder="Detalhe o motivo do seu contato"
                     required
                   ></textarea>
                 </div>
@@ -132,7 +144,8 @@
                 </div>
                 <div class="container-btn">
                   <button type="submit" id="sendButton" class="btn primary">
-                    Enviar Mensagem
+                    <span id="btnText">Enviar Mensagem</span>
+                    <span id="spin" class=""></span>
                   </button>
                 </div>
               </form>
@@ -227,7 +240,9 @@
         </div>
       </div>
     </footer>
+    <a href="#top" id="backToTop" aria-label="Voltar ao topo">↑</a>
+    <script src="./scripts/back-to-top.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
-    <!-- <script src="./scripts/send-email.js"></script> -->
+    <script src="./scripts/send-email.js"></script>
   </body>
 </html>
