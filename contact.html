@@ -91,7 +91,7 @@
                     id="nome"
                     name="nome"
                     placeholder="Ex: Alexandre Grotta"
-                    pattern="^([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+)(\s[A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+)*$"
+                    pattern="^([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+|[a-záéíóúâêîôûãõç]{1,3})(\s([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç]+|[a-záéíóúâêîôûãõç]{1,3}))*$"
                     title="O nome deve começar com letra maiúscula e conter apenas letras, espaços, apóstrofos e hífens."
                     minlength="3"
                     maxlength="255"
@@ -100,7 +100,13 @@
                 </div>
                 <div class="form-group">
                   <label for="email">E-mail*</label>
-                  <input type="email" id="email" placeholder="email@example.com" name="email" required />
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="email@example.com"
+                    name="email"
+                    required
+                  />
                 </div>
                 <div class="form-group">
                   <label for="telefone">Telefone</label>
