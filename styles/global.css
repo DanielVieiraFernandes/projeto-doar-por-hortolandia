@@ -7,7 +7,11 @@
 :root {
   --color-primary: #4ecdc4;
   --color-primary-light: #a2faf1;
-  --linear-gradient: linear-gradient(135deg, var(--color-primary-dark), var(--color-gray-800));
+  --linear-gradient: linear-gradient(
+    135deg,
+    var(--color-primary-dark),
+    var(--color-gray-800)
+  );
   --color-primary-dark: #3aa99e;
   --color-secondary: #ff8c42;
   --color-secondary-light: #ffc2a1;
@@ -29,7 +33,7 @@
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
+  --font-size-xl: 1.3rem;
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
@@ -65,7 +69,7 @@
 
 body {
   background-color: var(--color-gray-100);
-  font: var(--font-size-lg)/var(--spacing-lg) var(--font-family-body);
+  font: var(--font-size-lg) / var(--spacing-lg) var(--font-family-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -75,6 +79,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+p {
+  font-size: var(--font-size-xl);
 }
 
 h1,
@@ -183,7 +191,10 @@ ul {
   gap: 2rem;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -215,15 +226,18 @@ button, input, select, textarea {
   right: 2rem;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 0.75rem 1rem;
   border-radius: var(--border-radius-rounded);
-  font-size: 1.5rem;
   box-shadow: var(--shadow-md);
   pointer-events: none;
   opacity: 0;
   z-index: 999;
-  transition: opacity var(--transition-normal), transform var(--transition-normal);
-  text-align: center;
+  transition: opacity var(--transition-normal),
+    transform var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
 }
 
 #backToTop.visible {

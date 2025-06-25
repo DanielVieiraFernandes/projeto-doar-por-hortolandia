@@ -13,12 +13,10 @@ form.addEventListener("submit", async (event) => {
 
   const formData = new FormData(form);
 
-  const email = Object.fromEntries(formData.entries()).email;
-
   form.reset();
-  elements.forEach(el => el.disabled = true);
+  elements.forEach((el) => (el.disabled = true));
   try {
-    await fetch(`https://formsubmit.co/ajax/${email}`, {
+    await fetch(`https://formsubmit.co/ajax/daniel.vieira1@aluno.ifsp.edu.br`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -34,6 +32,6 @@ form.addEventListener("submit", async (event) => {
     button.removeAttribute("disabled");
     btnText.textContent = "Enviar Mensagem";
     spinner.classList.remove("spinner");
-    elements.forEach(el => el.disabled = false);
+    elements.forEach((el) => (el.disabled = false));
   }
 });

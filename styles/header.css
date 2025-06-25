@@ -76,7 +76,7 @@ header .container {
   }
 
   & p {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl)
   }
 
   & .cta-buttons {
@@ -123,10 +123,7 @@ header .container {
     & h1 {
       margin-bottom: var(--spacing-sm);
     }
-  
-    & p {
-      font-size: var(--font-size-xl);
-    }
+
   
     & .cta-buttons {
       display: flex;
